@@ -35,15 +35,15 @@ const callGenerateEndpoint = async () => {
   return (
     <div className="root">
       <Head>
-        <title>SmartSQL AI | robertbrewer.co.uk</title>
+        <title>SQL Smarty Pants Kevin | robertbrewer.co.uk</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>SmartSQL AI</h1>
+            <h1>Say goodbye to confusion with Ask Kevin, your AI SQL mate</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Get Answers to Your SQL Queries Instantly with SmartSQL AI</h2>
+            <h2>Our AI assistant Kevin breaks down complex SQL code in a way that's easy to understand, so you can focus on building your projects with confidence</h2>
           </div>
   <div className="prompt-container">
   <textarea
