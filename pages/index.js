@@ -45,25 +45,9 @@ const callGenerateEndpoint = async () => {
           <div className="header-subtitle">
             <h2>Get Answers to Your SQL Queries Instantly with SmartSQL AI</h2>
           </div>
-          {/* Add this code here*/}
-        <div className="prompt-container">
-        <textarea
-          className="prompt-box"
-          placeholder="how do I get the current date?"
-          value={userInput}
-          onChange={onUserChangedText}/>       
-        </div>
-           {/* New code I added here */}
-  <div className="prompt-buttons">
-    <a className="generate-button" onClick={callGenerateEndpoint}>
-      <div className="generate">
-        <p>Ask A/i</p>
-      </div>
-    </a>
-  </div>
   <div className="prompt-container">
   <textarea
-    placeholder="start typing here"
+    placeholder="how do I get the current date?"
     className="prompt-box"
     value={userInput}
     onChange={onUserChangedText}
