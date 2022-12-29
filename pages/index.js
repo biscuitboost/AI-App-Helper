@@ -40,7 +40,7 @@ const callGenerateEndpoint = async () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Say goodbye to confusion with Ask Kevin, your AI SQL mate</h1>
+            <h1>Ask Kevin, your AI SQL mate</h1>
           </div>
           <div className="header-subtitle">
             <h2>Our AI assistant Kevin breaks down complex SQL code in a way that's easy to understand, so you can focus on building your projects with confidence</h2>
