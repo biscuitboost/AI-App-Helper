@@ -47,7 +47,7 @@ const callGenerateEndpoint = async () => {
           </div>
   <div className="prompt-container">
   <textarea
-    placeholder=""
+    placeholder=" How do I count only cells with text?"
     className="prompt-box"
     value={userInput}
     onChange={onUserChangedText}
