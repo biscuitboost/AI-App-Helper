@@ -35,15 +35,15 @@ const callGenerateEndpoint = async () => {
   return (
     <div className="root">
       <Head>
-        <title>Jerry the Google Sheets Helper | robertbrewer.co.uk</title>
+        <title>The AI Google Sheets Helper | robertbrewer.co.uk</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>SQL Jerry</h1>
+            <h1>AI App Helper</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Our AI assistant Jerry will walk you through your Google Sheets woes</h2>
+            <h2>Our AI assistant will walk you through your Google Sheets woes</h2>
           </div>
   <div className="prompt-container">
   <textarea
