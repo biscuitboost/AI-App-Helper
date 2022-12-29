@@ -125,7 +125,7 @@ body {
     display: flex;
     place-content: center;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     flex: 0 0 auto;
     flex-flow: row nowrap;
     gap: 12px;
@@ -134,6 +134,10 @@ body {
     padding: 0px;
     position: relative;
     width: 100%;
+    background-image:linear-gradient(to right, #fc5c7d 0%, #6a82fb 100%);
+    color:#ecf0f1;
+    font-weight:600;
+    font-size:22px;
   }
   
   .keyboard-button {
