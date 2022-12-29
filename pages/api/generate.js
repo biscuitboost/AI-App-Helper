@@ -5,7 +5,7 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const basePromptPrefix = "Explain this SQL in the style of Kevin Bridges and be funny: ";
+const basePromptPrefix = "Funnily explain this sql in the style of Kevin Bridges and be funny:\n";
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
@@ -14,7 +14,7 @@ const generateAction = async (req, res) => {
     model: 'text-davinci-003',
     prompt: `${basePromptPrefix}${req.body.userInput}`,
     temperature: 0.7,
-    max_tokens: 250,
+    max_tokens: 256,
   });
   
   const basePromptOutput = baseCompletion.data.choices.pop();
