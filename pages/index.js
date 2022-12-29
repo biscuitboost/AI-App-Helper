@@ -35,7 +35,7 @@ const callGenerateEndpoint = async () => {
   return (
     <div className="root">
       <Head>
-        <title>Jerry SQL Explainer | robertbrewer.co.uk</title>
+        <title>Jerry the Google Sheets Helper | robertbrewer.co.uk</title>
       </Head>
       <div className="container">
         <div className="header">
@@ -43,8 +43,7 @@ const callGenerateEndpoint = async () => {
             <h1>SQL Jerry</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Our AI assistant Jerry breaks down complex SQL code in his own unique way!!</h2>
-            <h2>Anyone for cereal?</h2>
+            <h2>Our AI assistant Jerry will walk you through your Google Sheets woes</h2>
           </div>
   <div className="prompt-container">
   <textarea
