@@ -47,7 +47,13 @@ const callGenerateEndpoint = async () => {
           </div>
   <div className="prompt-container">
   <textarea
-    placeholder="how do I get the current date?"
+    placeholder="
+          SELECT year,
+            month,
+            COUNT(*) AS count
+          FROM tutorial.aapl_historical_stock_price
+          GROUP BY year, month
+          ORDER BY month, year"
     className="prompt-box"
     value={userInput}
     onChange={onUserChangedText}
@@ -60,7 +66,6 @@ const callGenerateEndpoint = async () => {
     </div>
   </a>
 </div>
-  {/* New code I added here */}
   {apiOutput && (
   <div className="output">
     <div className="output-header-container">
