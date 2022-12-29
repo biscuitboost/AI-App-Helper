@@ -47,11 +47,7 @@ const callGenerateEndpoint = async () => {
           </div>
   <div className="prompt-container">
   <textarea
-    placeholder="
-          SELECT year,month,COUNT(*) AS count\n
-          FROM tutorial.aapl_historical_stock_price\n
-          GROUP BY year, month\n
-          ORDER BY month, year\n"
+    placeholder=""
     className="prompt-box"
     value={userInput}
     onChange={onUserChangedText}
