@@ -35,25 +35,24 @@ const callGenerateEndpoint = async () => {
   return (
     <div className="root">
       <Head>
-        <title>SQL Smarty Pants Kevin | robertbrewer.co.uk</title>
+        <title>Jerry SQL Explainer | robertbrewer.co.uk</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Ask Kevin, your AI SQL Expert</h1>
+            <h1>SQL Jerry</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Our AI assistant Kevin breaks down complex SQL code in his own unique way!!</h2>
+            <h2>Our AI assistant Jerry breaks down complex SQL code in his own unique way!!</h2>
+            <h2>Anyone for cereal?</h2>
           </div>
   <div className="prompt-container">
   <textarea
     placeholder="
-          SELECT year,
-            month,
-            COUNT(*) AS count
-          FROM tutorial.aapl_historical_stock_price
-          GROUP BY year, month
-          ORDER BY month, year"
+          SELECT year,month,COUNT(*) AS count\n
+          FROM tutorial.aapl_historical_stock_price\n
+          GROUP BY year, month\n
+          ORDER BY month, year\n"
     className="prompt-box"
     value={userInput}
     onChange={onUserChangedText}
