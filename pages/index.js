@@ -40,10 +40,10 @@ const callGenerateEndpoint = async () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Ask Kevin, your AI SQL mate</h1>
+            <h1>Ask Kevin, your AI SQL Expert</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Our AI assistant Kevin breaks down complex SQL code in a way that's easy to understand, so you can focus on building your projects with confidence</h2>
+            <h2>Our AI assistant Kevin breaks down complex SQL code in his own unique way!!</h2>
           </div>
   <div className="prompt-container">
   <textarea
@@ -62,7 +62,7 @@ const callGenerateEndpoint = async () => {
   <a className={isGenerating ? 'generate-button loading' : 'generate-button'}
     onClick={callGenerateEndpoint}>
     <div className="generate">
-    {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
+    {isGenerating ? <span className="loader"></span> : <p>Explain</p>}
     </div>
   </a>
 </div>
@@ -70,7 +70,7 @@ const callGenerateEndpoint = async () => {
   <div className="output">
     <div className="output-header-container">
       <div className="output-header">
-        <h3>Output</h3>
+        <h3>Explanation</h3>
       </div>
     </div>
     <div className="output-content">

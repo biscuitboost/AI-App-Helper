@@ -199,6 +199,8 @@ textarea {
 
 .generate p {
     color: rgb(255, 255, 255);
+    font-family: 'Manrope', sans-serif;
+
     margin: 0;
 }
 
@@ -311,6 +313,10 @@ textarea {
 }
 
 .output-content {
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 1.6em;
     outline: none;
     display: flex;
     /* max-width: 25%; */
