@@ -1,76 +1,85 @@
-import Head from 'next/head';
-import { useState } from 'react';
-
+import Head from "next/head";
+import { useState } from "react";
 
 const Home = () => {
-  const [userInput, setUserInput] = useState('');
-  const [apiOutput, setApiOutput] = useState('')
-  const [isGenerating, setIsGenerating] = useState(false)
+  const [userInput, setUserInput] = useState("");
+  const [apiOutput, setApiOutput] = useState("");
+  const [isGenerating, setIsGenerating] = useState(false);
 
-const callGenerateEndpoint = async () => {
-  setIsGenerating(true);
-  
-  console.log("Calling OpenAI...")
-  const response = await fetch('/api/generate', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ userInput }),
-  });
+  const callGenerateEndpoint = async () => {
+    setIsGenerating(true);
 
-  const data = await response.json();
-  const { output } = data;
-  console.log("OpenAI replied...", output.text)
+    console.log("Calling OpenAI...");
+    const response = await fetch("/api/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ userInput }),
+    });
 
-  setApiOutput(`${output.text}`);
-  setIsGenerating(false);
-}
+    const data = await response.json();
+    const { output } = data;
+    console.log("OpenAI replied...", output.text);
+
+    setApiOutput(`${output.text}`);
+    setIsGenerating(false);
+  };
   const onUserChangedText = (event) => {
-    {/*console.log(event.target.value); */}
-  setUserInput(event.target.value);
-};
+    {
+      /*console.log(event.target.value); */
+    }
+    setUserInput(event.target.value);
+  };
   return (
     <div className="root">
       <Head>
-        <title>The AI Google Sheets Helper | robertbrewer.co.uk</title>
+        <title>Glasgow AI travel guide</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>AI App Helper</h1>
+            <h1>Glasgow Travel Guide</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Our AI assistant will walk you through your Google Sheets woes</h2>
+            <h2>Discover Glasgow with the local travel guide bot - Robert.</h2>
           </div>
-  <div className="prompt-container">
-  <textarea
-    placeholder=" How do I count only cells with text?"
-    className="prompt-box"
-    value={userInput}
-    onChange={onUserChangedText}
-  />
-<div className="prompt-buttons">
-  <a className={isGenerating ? 'generate-button loading' : 'generate-button'}
-    onClick={callGenerateEndpoint}>
-    <div className="generate">
-    {isGenerating ? <span className="loader"></span> : <p>Explain</p>}
-    </div>
-  </a>
-</div>
-  {apiOutput && (
-  <div className="output">
-    <div className="output-header-container">
-      <div className="output-header">
-        <h3>Explanation</h3>
-      </div>
-    </div>
-    <div className="output-content">
-      <p>{apiOutput}</p>
-    </div>
-  </div>
-)}
-</div>
+          <div className="prompt-container">
+            <textarea
+              placeholder="eg. I have an afternon free in Glasgow.  I like to nice vegan food and art - any recomendations?"
+              className="prompt-box"
+              value={userInput}
+              onChange={onUserChangedText}
+            />
+            <div className="prompt-buttons">
+              <a
+                className={
+                  isGenerating ? "generate-button loading" : "generate-button"
+                }
+                onClick={callGenerateEndpoint}
+              >
+                <div className="generate">
+                  {isGenerating ? (
+                    <span className="loader"></span>
+                  ) : (
+                    <p>Explain</p>
+                  )}
+                </div>
+              </a>
+            </div>
+            {apiOutput && (
+              <div className="output">
+                <div className="output-header-container">
+                  <div className="output-header">
+                    <h3>Explanation</h3>
+                  </div>
+                </div>
+                <div className="output-content">
+                  <p>{apiOutput}</p>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
