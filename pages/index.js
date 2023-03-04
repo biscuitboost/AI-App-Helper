@@ -42,7 +42,10 @@ const Home = () => {
             <h1>Glasgow Travel Guide</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Discover Glasgow with the local travel guide bot - Robert.</h2>
+            <h2>
+              Discover Glasgow with your personal local travel guide named
+              Robert.
+            </h2>
           </div>
           <div className="prompt-container">
             <textarea
