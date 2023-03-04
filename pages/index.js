@@ -62,7 +62,7 @@ const Home = () => {
                   {isGenerating ? (
                     <span className="loader"></span>
                   ) : (
-                    <p>Explain</p>
+                    <p>Ask Robert</p>
                   )}
                 </div>
               </a>
@@ -71,7 +71,7 @@ const Home = () => {
               <div className="output">
                 <div className="output-header-container">
                   <div className="output-header">
-                    <h3>Explanation</h3>
+                    <h3>Roberts Answer....</h3>
                   </div>
                 </div>
                 <div className="output-content">
