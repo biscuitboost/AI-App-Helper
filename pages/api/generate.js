@@ -39,5 +39,4 @@ const generateAction = async (req, res) => {
   res.status(200).json({ content: basePromptOutput });
 };
 
-//export default generateAction;
-export default turboCompletion;
+export default generateAction;
