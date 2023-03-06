@@ -32,8 +32,8 @@ const generateAction = async (req, res) => {
   });
 
   //const basePromptOutput = baseCompletion.data.choices.pop();
-  //console.log(turboCompletion.data.choices.content);
-  const basePromptOutput = turboCompletion.data.choices.pop();
+  console.log(turboCompletion.data.choices[0].message.content);
+  const basePromptOutput = turboCompletion.data.choices.pop.message();
 
   //res.status(200).json({ output: basePromptOutput });
   res.status(200).json({ content: basePromptOutput });
