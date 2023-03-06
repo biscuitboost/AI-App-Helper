@@ -20,15 +20,20 @@ const generateAction = async (req, res) => {
     max_tokens: 256,
   });
 */
+
   const turboCompletion = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
     messages: [
-      { role: "system", content: "You are a helpful assistant." },
-      { role: "user", content: "Who won the world series in 2020?" },
+      {
+        role: "user",
+        content: prompt,
+      },
     ],
-    temperature: 0.3,
-    max_tokens: 256,
   });
+
+  console.log(turboCompletion.data.choices[0].message.content);
+
+  //output turboCompletion as json to console
 
   //const basePromptOutput = baseCompletion.data.choices.pop();
   //console.log(turboCompletion);
