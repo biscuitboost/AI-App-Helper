@@ -32,10 +32,12 @@ const generateAction = async (req, res) => {
   });
 
   //const basePromptOutput = baseCompletion.data.choices.pop();
+  console.log(turboCompletion);
   const basePromptOutput = turboCompletion.data.choices.pop();
 
   //res.status(200).json({ output: basePromptOutput });
   res.status(200).json({ content: basePromptOutput });
 };
 
-export default generateAction;
+//export default generateAction;
+export default turboCompletion;
