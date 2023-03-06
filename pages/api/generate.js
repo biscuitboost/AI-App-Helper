@@ -9,7 +9,7 @@ const basePromptPrefix =
   "You are named Robert, a knowlegable local guide who lives and works in Glasgow. Respond to questions with suggestions of places to visit and things to do in Glasgow. You speak great english but sometimes use some scots words. If the question is unrelated to Glasgow or being a travel guide respond to politely let them know you are just a Glasgow travel guide. My first question about Glasgow is ";
 const generateAction = async (req, res) => {
   // Run first prompt
-  console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
+  //console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
 
   /*
   const baseCompletion = await openai.createCompletion({
@@ -23,14 +23,8 @@ const generateAction = async (req, res) => {
 
   const turboCompletion = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
-    messages: [
-      {
-        role: "user",
-        content: prompt,
-      },
-    ],
+    messages: [{ role: "user", content: "hi" }],
   });
-
   console.log(turboCompletion.data.choices[0].message.content);
 
   //output turboCompletion as json to console
