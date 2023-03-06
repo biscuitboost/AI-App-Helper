@@ -32,7 +32,7 @@ const generateAction = async (req, res) => {
   });
 
   //const basePromptOutput = baseCompletion.data.choices.pop();
-  console.log(turboCompletion.data.choices.content(Text));
+  //console.log(turboCompletion.data.choices.content);
   const basePromptOutput = turboCompletion.data.choices.pop();
 
   //res.status(200).json({ output: basePromptOutput });
