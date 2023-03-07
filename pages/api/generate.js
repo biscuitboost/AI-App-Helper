@@ -23,14 +23,14 @@ const generateAction = async (req, res) => {
   res.status(200).json({ output: basePromptOutput });
 */
 
-  const turboCompletion = await openai.createChatCompletion({
+  const baseCompletion = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
     messages: [{ role: "user", content: "hi" }],
   });
 
-  console.log("turboCompetion = " + turboCompletion);
+  console.log("turboCompetion = " + baseCompletion);
 
-  const basePromptOutput = turboCompetion.data.choices.message;
+  const basePromptOutput = baseCompletion.data.choices.pop();
 
   res.status(200).json({ content: basePromptOutput });
 };
