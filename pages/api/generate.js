@@ -32,7 +32,7 @@ const generateAction = async (req, res) => {
     ],
   });
 
-  const basePromptOutput = baseCompletion.data.choices.message;
+  const basePromptOutput = baseCompletion.data.choices[0].message;
 
   res.status(200).json({ output: basePromptOutput });
 };
