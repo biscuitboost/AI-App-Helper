@@ -28,14 +28,11 @@ try {
     });
     console.log(turboCompletion.data.choices[0].message.content);
 
-    //output turboCompletion as json to console
-
     //const basePromptOutput = baseCompletion.data.choices.pop();
-    //console.log(turboCompletion);
-    //const basePromptOutput = turboCompletion.data.choices.pop.message();
+    const basePromptOutput = turboCompletion.data.choices.message.pop();
 
     //res.status(200).json({ output: basePromptOutput });
-    //res.status(200).json({ content: basePromptOutput });
+    res.status(200).json({ content: basePromptOutput });
   };
 } catch (error) {
   if (error.response) {
