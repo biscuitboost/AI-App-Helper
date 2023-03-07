@@ -28,9 +28,10 @@ const generateAction = async (req, res) => {
     messages: [{ role: "user", content: "hi" }],
   });
 
-  console.log(turboCompletion.data.choices[0].message.content);
+  console.log("turboCompetion = " + turboCompletion);
 
-  const basePromptOutput = turboCompletion.data.choices.message.pop();
+  //const basePromptOutput = turboCompletion.data.choices.message.pop();
+  const basePromptOutput = "test";
   res.status(200).json({ content: basePromptOutput });
 };
 
