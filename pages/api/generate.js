@@ -26,8 +26,8 @@ const generateAction = async (req, res) => {
   const baseCompletion = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
     messages: [
-      { role: "system", content: "${basePromptPrefix}" },
-      { role: "user", content: "${req.body.userInput}" },
+      { role: "system", content: "You are a helpful assistant." },
+      { role: "user", content: "${basePromptPrefix}${req.body.userInput}" },
     ],
   });
 
