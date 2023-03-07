@@ -30,7 +30,7 @@ const generateAction = async (req, res) => {
 
   console.log("turboCompetion = " + turboCompletion);
 
-  const basePromptOutput = turboCompetion.choices[0].message.content;
+  const basePromptOutput = turboCompetion.choices[0].message;
 
   res.status(200).json({ content: basePromptOutput });
 };
