@@ -11,7 +11,7 @@ const basePromptPrefix =
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
-
+  /*
   const baseCompletion = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: `${basePromptPrefix}${req.body.userInput}` + "\n",
@@ -21,26 +21,16 @@ const generateAction = async (req, res) => {
 
   const basePromptOutput = baseCompletion.data.choices.pop();
   res.status(200).json({ output: basePromptOutput });
+*/
 
-  /*
-  try {
-      const turboCompletion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: "hi" }],
-      });
-      
-      console.log(turboCompletion.data.choices[0].message.content);
-  
-      const basePromptOutput = turboCompletion.data.choices.message.pop();
-      res.status(200).json({ content: basePromptOutput });
-    };
-  } catch (error) {
-    if (error.response) {
-      console.log(error.response.data);
-      console.log(error.response.status);
-    } else {
-      console.log(error);
-    }
-    */
+  const turboCompletion = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: "hi" }],
+  });
+
+  console.log(turboCompletion.data.choices[0].message.content);
+
+  const basePromptOutput = turboCompletion.data.choices.message.pop();
+  res.status(200).json({ content: basePromptOutput });
 };
 export default generateAction;
