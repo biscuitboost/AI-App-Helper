@@ -20,9 +20,9 @@ const Home = () => {
 
     const data = await response.json();
     const { output } = data;
-    console.log("OpenAI replied...", output.text);
+    console.log("OpenAI replied...", output.content);
 
-    setApiOutput(`${output.text}`);
+    setApiOutput(`${output.content}`);
     setIsGenerating(false);
   };
   const onUserChangedText = (event) => {
