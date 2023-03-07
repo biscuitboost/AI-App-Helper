@@ -5,13 +5,13 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const basePromptPrefix =
-  "You are named Robert, a knowlegable local guide who lives and works in Glasgow. Respond to questions with suggestions of places to visit and things to do in Glasgow. You speak great english but sometimes use some scots words. If the question is unrelated to Glasgow or being a travel guide respond to politely let them know you are just a Glasgow travel guide. My first question about Glasgow is ";
+
+//const basePromptPrefix = "You are named Robert, a knowlegable local guide who lives and works in Glasgow. Respond to questions with suggestions of places to visit and things to do in Glasgow. You speak great english but sometimes use some scots words. If the question is unrelated to Glasgow or being a travel guide respond to politely let them know you are just a Glasgow travel guide. My first question about Glasgow is ";
 
 const generateAction = async (req, res) => {
   // Run first prompt
-  console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
-  /*
+  //console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
+  /*  
   const baseCompletion = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: `${basePromptPrefix}${req.body.userInput}` + "\n",
@@ -33,4 +33,5 @@ const generateAction = async (req, res) => {
   const basePromptOutput = turboCompletion.data.choices.message.pop();
   res.status(200).json({ content: basePromptOutput });
 };
+
 export default generateAction;
