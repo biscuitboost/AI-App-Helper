@@ -10,9 +10,9 @@ const basePromptPrefix =
 try {
   const generateAction = async (req, res) => {
     // Run first prompt
-    //console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
+    console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
 
-    /*
+    
     const baseCompletion = await openai.createCompletion({
       model: "text-davinci-003",
       reminders: [{ name: "User", tasks: messages }],
@@ -20,18 +20,21 @@ try {
       temperature: 0.3,
       max_tokens: 256,
     });
-  */
 
+
+    const basePromptOutput = baseCompletion.data.choices.pop();
+    res.status(200).json({ output: basePromptOutput });
+    
+
+/*
     const turboCompletion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: "hi" }],
     });
+    
     console.log(turboCompletion.data.choices[0].message.content);
 
-    //const basePromptOutput = baseCompletion.data.choices.pop();
     const basePromptOutput = turboCompletion.data.choices.message.pop();
-
-    //res.status(200).json({ output: basePromptOutput });
     res.status(200).json({ content: basePromptOutput });
   };
 } catch (error) {
@@ -42,5 +45,5 @@ try {
     console.log(error);
   }
 }
-
+*/
 export default generateAction;
