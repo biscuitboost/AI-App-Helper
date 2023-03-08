@@ -30,6 +30,9 @@ const generateAction = async (req, res) => {
       { role: "system", content: "You are a helpful assistant." },
       { role: "user", content: "${basePromptPrefix}${req.body.userInput}" },
     ],
+    temperature: 0.3,
+    max_tokens: 256,
+    echo: true,
   });
 
   const basePromptOutput = baseCompletion.data.choices[0].message;
